@@ -1,10 +1,9 @@
 'use strict';
 // Service for Profiles
-angular.module('ProfileService')
-
-.factory('ProfileService', function($http) {
+libraryApp.factory('ProfileService', ['$routeParams', function($routeParams) {
 	var profileService = {};
-	var profileService.user = null;
+	profileService.allUsers = [];
+	profileService.currentUser = null;
 
 	return profileService;
-}).run(function (ProfileService){})
+}]);

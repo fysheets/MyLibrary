@@ -1,7 +1,6 @@
 'use strict';
 // Controller
-angular.module('ProfileController');
-function ProfileController($scope) {
-	$scope.title = "My Library"
-	
-}
+libraryApp.controller('ProfileController', ['$scope', '$routeParams', 'ProfileService', function($scope, $routeParams, ProfileService) {
+	$scope.title = "My Library";
+
+}]);
