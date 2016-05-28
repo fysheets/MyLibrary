@@ -1,0 +1,14 @@
+{
+	"Users": [
+		{
+			"username": "fysheets",
+			"firstName": "Farhanah",
+			"lastName": "Sheets",
+			"favorite": "Pride & Prejudice",
+			"hometown": "Beaver Falls",
+			"birthday": 593058708000,
+			"bookClub": true,
+			"image": "static/images/BPLbooks.jpg"
+		}
+	]
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html ng-app="MyLibrary">
+<!-- Template based off of: https://github.com/google/material-design-lite/tree/master/templates/portfolio/Tutorial -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>My Library</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.1/material.grey-teal.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <span class="mdl-layout__title">My Library</span>
+                <div class="mdl-layout-spacer"></div>
+                <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+                    <a class="mdl-navigation__link" href="#">Profile</a>
+                    <a class="mdl-navigation__link" href="#">Books</a>
+                    <a class="mdl-navigation__link" href="#">Readers</a>
+                </nav>
+            </div>
+        </header>
+        <main class="mdl-layout__content">
+        	<div class="mdl-grid portfolio-max-width">
+                <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">User's Library</h2> <!-- get user name to input here -->
+                    </div>
+                    <div class="mdl-card__media">
+                        <img class="article-image" src="static/images/BPLBooks.jpg" border="0" alt="">
+                    </div>
+
+                    <div class="mdl-grid portfolio-copy">
+                        <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">About</h3>
+                        <div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
+                            <ul>
+                            	<li>Full Name</li>
+                            	<li>Favorite Book</li>
+                            	<li>Hometown</li>
+                            	<li>Birthday</li>
+                            	<li>Book Club (willing to share books)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--12-col">
+                    <h3>Books</h3>
+                </div>
+                <!-- place holders for additional data -->
+                <div class="mdl-cell mdl-cell--12-col-tablet">Cell 1</div>
+                <div class="mdl-cell mdl-cell--4-col-tablet">Cell 2</div>
+                <div class="mdl-cell mdl-cell--4-col-tablet">Cell 3</div>
+            </div>
+
+            <!-- Placeholder for Friend relationships
+            <!--div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--12-col">
+                    <h3>Friends</h3>
+                </div>
+                <div class="mdl-cell mdl-cell--12-col-tablet">Cell 1</div>
+                <div class="mdl-cell mdl-cell--4-col-tablet">Cell 2</div>
+                <div class="mdl-cell mdl-cell--4-col-tablet">Cell 3</div>
+            </div-->
+
+            <footer class="mdl-mini-footer">
+                <div class="mdl-mini-footer__left-section">
+                    <div class="mdl-logo">My Library</div>
+                </div>
+                <div class="mdl-mini-footer__right-section">
+                    <ul class="mdl-mini-footer__link-list">
+                        <li>2016</li>
+                    </ul>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+<!-- make available once ready -->
+	<!--script src="js/app.js"></script>
+	<script src="js/services/ProfileService.js"></script>
+	<script src="js/controllers/ProfileController.js"></script-->
+	<script src="https://code.getmdl.io/1.0.6/material.min.js"></script>
+</body>
+
+</html>
