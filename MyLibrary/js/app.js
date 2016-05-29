@@ -4,8 +4,8 @@ var libraryApp = angular.module('myLibrary', ['ngRoute']);
 libraryApp.config(function($routeProvider) {
 		$routeProvider
 		//.when('/'), {templateUrl: "partials/Home.html", controller:"MainController"})
-		.when('/myProfile/:user?', {templateUrl: "partials/Profile.html", controller: "ProfileController"})
-		//.when('/readers'), {templateUrl: "partials/Readers.html", controller:"ReadersController"})
-		//.when('/books'), {templateUrl: "partials/Books.html", controller:"BooksController"})
-		.otherwise({redirectTo: '/myProfile'});
+		.when('/profile/:user?', {templateUrl: "partials/Profile.html", controller: "ProfileController"})
+		.when('/readers/:user?', {templateUrl: "partials/Readers.html", controller:"ReaderController"})
+		//.when('/books/:book?', {templateUrl: "partials/Books.html", controller:"BooksController"})
+		.otherwise({redirectTo: '/books'});
 	});

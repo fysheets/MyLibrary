@@ -16,16 +16,21 @@ console.log($routeParams.user)
 		$http.get('static/Users.json')
 			.success(function(data) {
 				profileService.data.allUsers = data.users
-				for (var i = 0; i < profileService.data.allUsers.length; i++) {
-					var user = profileService.data.allUsers[i]
-					if (user.username == $routeParams.user) {
-						profileService.data.currentUser = user
-					}
-				}
 			}).error(function(data) {
 				console.log("Unable to fetch users");
 				profileService.reset();
 			});
+	}
+
+	profileService.getCurrentUser = function() {
+		if ($routeParams.user != null) {
+			for (var i = 0; i < profileService.data.allUsers.length; i++) {
+				var user = profileService.data.allUsers[i]
+				if (user.username == $routeParams.user) {
+					profileService.data.currentUser = user
+				}
+			}
+		}
 	}
 
 	return profileService;

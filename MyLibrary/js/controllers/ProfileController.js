@@ -6,7 +6,8 @@ libraryApp.controller('ProfileController', ['$scope', '$routeParams', 'ProfileSe
 
 	$scope.init = function() {
 		if ($routeParams.user != null) {
-			$scope.getUsers()
+
+			$scope.getCurrentUser()
 		} else {
 			// need to prompt for username
 			console.log("No username given")
@@ -14,14 +15,19 @@ libraryApp.controller('ProfileController', ['$scope', '$routeParams', 'ProfileSe
 		
 	}
 
-	$scope.getUsers = function() {
+	$scope.getCurrentUser = function() {
 		ProfileService.getUsers()
 		$timeout(function() { 
-			if(ProfileService.data.currentUser != null) {
-				console.log("Current user found")
-			}
-			else {
-				console.log("Error finding user")
+			if (ProfileService.data.allUsers != null) {
+				ProfileService.getCurrentUser()
+				$timeout(function() {
+					if(ProfileService.data.currentUser != null) {
+						console.log("Current user found")
+					}
+					else {
+						console.log("Error finding user")
+					}
+				}, 1000)
 			}
 		}, 1000)
 		
