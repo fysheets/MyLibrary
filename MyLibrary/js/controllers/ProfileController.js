@@ -6,8 +6,10 @@ libraryApp.controller('ProfileController', ['$scope', '$routeParams', 'ProfileSe
 
 	$scope.init = function() {
 		if ($routeParams.user != null) {
-
 			$scope.getCurrentUser()
+			$timeout(function() {
+				$scope.getBookDetails()
+			}, 100)
 		} else {
 			// need to prompt for username
 			console.log("No username given")
@@ -27,9 +29,19 @@ libraryApp.controller('ProfileController', ['$scope', '$routeParams', 'ProfileSe
 					else {
 						console.log("Error finding user")
 					}
-				}, 1000)
+				}, 100)
 			}
-		}, 1000)
+		}, 100)
+		
+	}
+
+	$scope.getBookDetails = function() {
+		ProfileService.getBookDetails()
+		$timeout(function() { 
+			if (ProfileService.data.bookDetails == null) {
+				console.log("Error finding books")
+			}
+		}, 100)
 		
 	}
 

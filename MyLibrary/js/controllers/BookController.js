@@ -19,7 +19,7 @@ libraryApp.controller('BookController', ['$scope', '$routeParams', 'BookService'
 			else {
 				console.log("Error finding books")
 			}
-		}, 1000)
+		}, 100)
 		
 	}
 

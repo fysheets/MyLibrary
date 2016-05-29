@@ -1,4 +1,4 @@
-<div ng-init="init()">
+<div ng-init="init()" ng-controller="ProfileController">
     <div class="mdl-grid portfolio-max-width">
         <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
             <div class="mdl-card__title">
@@ -28,9 +28,15 @@
             <h3>Books</h3>
         </div>
         <!-- place holders for additional data -->
-        <div class="mdl-cell mdl-cell--12-col-tablet">Cell 1</div>
-        <div class="mdl-cell mdl-cell--4-col-tablet">Cell 2</div>
-        <div class="mdl-cell mdl-cell--4-col-tablet">Cell 3</div>
+        <div class="mdl-cell mdl-cell--12-col-tablet" ng-repeat="book in service.bookDetails">
+            <h4><a href="{{book.shopUrl}}" target="_blank">{{book.title}}</a></h4>
+            <a href="{{book.shopUrl}}" target="_blank"><img src="{{book.image}}" height="50%" width = "50%"></img></a>
+            <ul>
+                <li>Author: {{book.author}}</li>
+                <li>Publication Date: {{book.pubDate | date}}</li>
+                <li>Genre: {{book.genre}}</li>
+            </ul>
+        </div>
     </div>
 
     <!-- Placeholder for Friend relationships

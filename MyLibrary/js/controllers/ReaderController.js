@@ -18,7 +18,7 @@ libraryApp.controller('ReaderController', ['$scope', '$routeParams', 'ReaderServ
 			else {
 				console.log("Error finding users")
 			}
-		}, 1000)
+		}, 100)
 		
 	}
 
