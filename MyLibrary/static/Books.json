@@ -1,0 +1,49 @@
+{
+	"books": [
+		{
+			"id": 1,
+			"title": "Pride & Prejudice",
+			"author": "Jane Austen",
+			"genre": "fiction",
+			"pubDate": -4480075883000,
+			"image": "http://ecx.images-amazon.com/images/I/51l5yiwfUTL._SX331_BO1,204,203,200_.jpg",
+			"shopUrl": "http://smile.amazon.com/Pride-Prejudice-Jane-Austen/dp/1503290565/ref=sr_1_1?s=books&ie=UTF8&qid=1464543981&sr=1-1&keywords=pride+and+prejudice"
+		},
+		{
+			"id": 2,
+			"title": "The Great Gatsby",
+			"author": "F. Scott Fitzgerald",
+			"genre": "fiction",
+			"pubDate": -1411497083000,
+			"image": "static/images/gatsby.jpg",
+			"shopUrl": "http://smile.amazon.com/Great-Gatsby-F-Scott-Fitzgerald/dp/0743273567/ref=sr_1_1?s=books&ie=UTF8&qid=1464544022&sr=1-1&keywords=the+great+gatsby"
+		},
+		{
+			"id": 3,
+			"title": "The Catcher in the Rye",
+			"author": "J.D. Salinger",
+			"genre": "fiction",
+			"pubDate": -898194683000,
+			"image": "static/images/catcher.jpg",
+			"shopUrl": "http://smile.amazon.com/Catcher-Rye-J-D-Salinger/dp/0316769487/ref=sr_1_1?s=books&ie=UTF8&qid=1464544087&sr=1-1&keywords=catcher+in+the+rye"
+		},
+		{
+			"id": 4,
+			"title": "Cleopatra: A Life",
+			"author": "Stacy Shiff",
+			"genre": "biography",
+			"pubDate": 1289370517000,
+			"image": "http://ecx.images-amazon.com/images/I/41A9RTmB7dL._SX327_BO1,204,203,200_.jpg",
+			"shopUrl": "http://smile.amazon.com/Cleopatra-Life-Stacy-Schiff/dp/0316001945/ref=sr_1_1?s=books&ie=UTF8&qid=1464544133&sr=1-1&keywords=cleopatra%3A+a+life"
+		},
+		{
+			"id": 5,
+			"title": "Catch 22",
+			"author": "Joseph Heller",
+			"genre": "fiction",
+			"pubDate": -256930283000,
+			"image": "http://ecx.images-amazon.com/images/I/51kqbC3YKvL._SX322_BO1,204,203,200_.jpg",
+			"shopUrl": "http://smile.amazon.com/Catch-22-50th-Anniversary-Joseph-Heller/dp/1451626657/ref=sr_1_1?s=books&ie=UTF8&qid=1464544172&sr=1-1&keywords=catch+22"
+		}
+	]
+}

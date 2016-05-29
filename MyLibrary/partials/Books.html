@@ -1,0 +1,18 @@
+<div ng-controller="BookController" ng-init="initBooks()">
+    <div class="mdl-layout__title">
+        <h3>Shared Books</h3>
+    </div>
+    <div class="mdl-grid">
+        
+        <!-- place holders for additional data -->
+        <div class="mdl-cell mdl-cell--12-col-tablet" ng-repeat="book in service.allBooks">
+            <h4><a href="{{book.shopUrl}}" target="_blank">{{book.title}}</a></h4>
+            <a href="{{book.shopUrl}}" target="_blank"><img src="{{book.image}}" height="50%" width = "50%"></img></a>
+            <ul>
+                <li>Author: {{book.author}}</li>
+                <li>Publication Date: {{book.pubDate | date}}</li>
+                <li>Genre: {{book.genre}}</li>
+            </ul>
+        </div>
+    </div>
+</div>

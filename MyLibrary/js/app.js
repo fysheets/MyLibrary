@@ -6,6 +6,6 @@ libraryApp.config(function($routeProvider) {
 		//.when('/'), {templateUrl: "partials/Home.html", controller:"MainController"})
 		.when('/profile/:user?', {templateUrl: "partials/Profile.html", controller: "ProfileController"})
 		.when('/readers/:user?', {templateUrl: "partials/Readers.html", controller:"ReaderController"})
-		//.when('/books/:book?', {templateUrl: "partials/Books.html", controller:"BooksController"})
+		.when('/books/:book?', {templateUrl: "partials/Books.html", controller:"BookController"})
 		.otherwise({redirectTo: '/books'});
 	});
