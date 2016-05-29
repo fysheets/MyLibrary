@@ -1,11 +1,9 @@
-<div ng-controller="BookController" ng-init="initBooks()">
+<div ng-controller="BookController" ng-init="init()">
     <div class="mdl-layout__title">
         <h3>Shared Books</h3>
     </div>
     <div class="mdl-grid">
-        
-        <!-- place holders for additional data -->
-        <div class="mdl-cell mdl-cell--12-col-tablet" ng-repeat="book in service.allBooks">
+        <div class="mdl-cell mdl-cell--12-col-tablet" ng-repeat="book in main.allBooks">
             <h4><a href="{{book.shopUrl}}" target="_blank">{{book.title}}</a></h4>
             <a href="{{book.shopUrl}}" target="_blank"><img src="{{book.image}}" height="50%" width = "50%"></img></a>
             <ul>

@@ -1,26 +1,12 @@
 'use strict';
 // Controller
-libraryApp.controller('BookController', ['$scope', '$routeParams', 'BookService', '$timeout', function($scope, $routeParams, BookService, $timeout) {
+libraryApp.controller('BookController', ['$scope', '$routeParams', 'BookService', '$timeout', 'MainService', function($scope, $routeParams, BookService, $timeout, MainService) {
+	$scope.main = MainService.data
 	$scope.service = BookService.data;
   	$scope.data = {}
 
-	$scope.initBooks = function() {
-		console.log("hii")
-		$scope.getBooks()
-	}
-
-	$scope.getBooks = function() {
-		BookService.getBooks()
-		$timeout(function() { 
-			if(BookService.data.allBooks != null) {
-				console.log("Books Found")
-				console.log(BookService.data.allBooks)
-			}
-			else {
-				console.log("Error finding books")
-			}
-		}, 100)
-		
-	}
+  	$scope.init = function() {
+  		MainService.getBooks()
+  	}
 
 }]);

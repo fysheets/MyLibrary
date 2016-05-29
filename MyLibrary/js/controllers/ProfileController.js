@@ -1,14 +1,18 @@
 'use strict';
 // Controller
-libraryApp.controller('ProfileController', ['$scope', '$routeParams', 'ProfileService', '$timeout', function($scope, $routeParams, ProfileService, $timeout) {
+libraryApp.controller('ProfileController', ['$scope', '$routeParams', 'ProfileService', '$timeout', 'MainService', function($scope, $routeParams, ProfileService, $timeout, MainService) {
+	$scope.main = MainService.data;
 	$scope.service = ProfileService.data;
   	$scope.data = {}
 
 	$scope.init = function() {
 		if ($routeParams.user != null) {
-			$scope.getCurrentUser()
+			MainService.getUsers()
 			$timeout(function() {
-				$scope.getBookDetails()
+				$scope.getCurrentUser()
+				$timeout(function() {
+					$scope.getBookDetails()
+				}, 100)
 			}, 100)
 		} else {
 			// need to prompt for username
@@ -18,21 +22,17 @@ libraryApp.controller('ProfileController', ['$scope', '$routeParams', 'ProfileSe
 	}
 
 	$scope.getCurrentUser = function() {
-		ProfileService.getUsers()
-		$timeout(function() { 
-			if (ProfileService.data.allUsers != null) {
-				ProfileService.getCurrentUser()
-				$timeout(function() {
-					if(ProfileService.data.currentUser != null) {
-						console.log("Current user found")
-					}
-					else {
-						console.log("Error finding user")
-					}
-				}, 100)
-			}
-		}, 100)
-		
+		if (MainService.data.allUsers != null) {
+			ProfileService.getCurrentUser()
+			$timeout(function() {
+				if(ProfileService.data.currentUser != null) {
+					console.log("Current user found")
+				}
+				else {
+					console.log("Error finding user")
+				}
+			}, 100)
+		}
 	}
 
 	$scope.getBookDetails = function() {
