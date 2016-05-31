@@ -20,6 +20,7 @@ libraryApp.factory('MainService', ['$routeParams', '$http', function($routeParam
 
 	mainService.getUsers = function() {
 		if (mainService.data.allUsers == null){
+			//http://localhost:3000/static/Users.json
 			$http.get('static/Users.json')
 				.success(function(data) {
 					mainService.data.allUsers = data.users
