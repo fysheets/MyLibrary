@@ -32,9 +32,9 @@ libraryApp.factory('MainService', ['$routeParams', '$http', function($routeParam
 
 	mainService.getBooks = function() {
 		if (mainService.data.allBooks == null) {
-			$http.get('static/Books.json')
+			$http.get('http://localhost:3000/testBooks')
 				.success(function(data) {
-					mainService.data.allBooks = data.books
+					mainService.data.allBooks = data
 				}).error(function(data) {
 					console.log("Unable to fetch users");
 					mainService.reset();
