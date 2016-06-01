@@ -20,10 +20,9 @@ libraryApp.factory('MainService', ['$routeParams', '$http', function($routeParam
 
 	mainService.getUsers = function() {
 		if (mainService.data.allUsers == null){
-			//http://localhost:3000/static/Users.json
-			$http.get('static/Users.json')
+			$http.get('http://localhost:3000/testUsers')
 				.success(function(data) {
-					mainService.data.allUsers = data.users
+					mainService.data.allUsers = data
 				}).error(function(data) {
 					console.log("Unable to fetch users");
 					mainService.reset();
