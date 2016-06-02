@@ -1,6 +1,10 @@
 <div ng-controller="BookController" ng-init="init()">
     <div class="mdl-layout__title">
         <h3>Shared Books</h3>
+        <br>
+        <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" ng-href="http://localhost:3000/newBook">
+          Add User
+        </a>
     </div>
     <div class="mdl-grid">
         <div class="mdl-cell mdl-cell--12-col-tablet" ng-repeat="book in main.allBooks">
