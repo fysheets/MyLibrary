@@ -7,15 +7,13 @@
         </a>
     </div>
     <div class="mdl-grid">
-        
-        <!-- place holders for additional data -->
-        <div class="mdl-cell mdl-cell--12-col-tablet" ng-repeat="user in main.allUsers" ng-show="{{service.currentUser != user.username}}">
+        <div class="mdl-cell mdl-cell--4-col" ng-repeat="user in main.allUsers" ng-show="{{service.currentUser != user.username}}">
             <h4><a href="#/profile/{{user.username}}">{{user.firstName}} {{user.lastName}}</a></h4>
             <ul>
                 <li>Favorite Book: {{user.favorite}}</li>
                 <li>Hometown: {{user.hometown}}</li>
                 <li>Birthday: {{user.birthday | date:'MMMM d'}}</li>
-                <li>Book Club: {{user.bookClub ? 'Yes' : 'No'}}</li>
+                <li>Book Club: {{user.bookClub == true ? 'Yes' : 'No'}}</li>
             </ul>
         </div>
     </div>
