@@ -6,6 +6,7 @@ libraryApp.factory('ProfileService', ['$routeParams', '$http', 'MainService', fu
 	profileService.data = {};
 	profileService.data.currentUser = null;
 	profileService.data.bookDetails = null;
+	profileService.data.defaultImage = "static/images/default.png";
 
 	profileService.reset = function() {
 		profileService.data.currentUser = null;
@@ -24,7 +25,7 @@ libraryApp.factory('ProfileService', ['$routeParams', '$http', 'MainService', fu
 	}
 
 	profileService.getBookDetails = function() {
-		if (profileService.data.currentUser != null) {
+		if (profileService.data.currentUser != null && profileService.data.currentUser.books != null) {
 			$http.get('static/Books.json')
 				.success(function(data) {
 					var allBooks = data.books

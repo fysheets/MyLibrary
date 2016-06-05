@@ -9,7 +9,7 @@
     <div class="mdl-grid">
         <div class="mdl-cell mdl-cell--12-col-tablet" ng-repeat="book in main.allBooks">
             <h4><a href="{{book.shopUrl}}" target="_blank">{{book.title}}</a></h4>
-            <a href="{{book.shopUrl}}" target="_blank"><img src="{{book.image}}" height="50%" width = "50%"></img></a>
+            <a href="{{book.shopUrl}}" target="_blank"><img src="{{book.image != '' ? book.image : service.defaultImage}}" height="50%" width = "50%"></img></a>
             <ul>
                 <li>Author: {{book.author}}</li>
                 <li>Publication Date: {{book.pubDate | date}}</li>
