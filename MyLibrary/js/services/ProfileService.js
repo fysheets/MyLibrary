@@ -26,9 +26,9 @@ libraryApp.factory('ProfileService', ['$routeParams', '$http', 'MainService', fu
 
 	profileService.getBookDetails = function() {
 		if (profileService.data.currentUser != null && profileService.data.currentUser.books != null) {
-			$http.get('static/Books.json')
+			$http.get('http://localhost:3000/testBooks')
 				.success(function(data) {
-					var allBooks = data.books
+					var allBooks = data
 					var userBooks = profileService.data.currentUser.books
 					var userBookDetails = []
 					for (var i = 0; i < allBooks.length; i++) {

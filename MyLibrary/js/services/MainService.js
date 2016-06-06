@@ -36,7 +36,7 @@ libraryApp.factory('MainService', ['$routeParams', '$http', function($routeParam
 				.success(function(data) {
 					mainService.data.allBooks = data
 				}).error(function(data) {
-					console.log("Unable to fetch users");
+					console.log("Unable to fetch books");
 					mainService.reset();
 				});
 		}
