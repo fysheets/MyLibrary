@@ -26,11 +26,10 @@
         </div>
     </div>
 
-    <div class="mdl-grid" ng-show="service.bookDetails.length > 0">
-        <div class="mdl-cell mdl-cell--12-col">
+    <div class="mdl-grid" >
+        <div class="mdl-cell mdl-cell--12-col" ng-show="service.bookDetails.length > 0">
             <h3>Books</h3>
         </div>
-        <!-- place holders for additional data -->
         <div class="mdl-cell mdl-cell--12-col-tablet" ng-repeat="book in service.bookDetails">
             <h4><a href="{{book.shopUrl}}" target="_blank">{{book.title}}</a></h4>
             <a href="{{book.shopUrl}}" target="_blank"><img src="{{book.image}}" height="50%" width = "50%"></img></a>

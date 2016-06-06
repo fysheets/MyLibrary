@@ -40,9 +40,12 @@ libraryApp.factory('ProfileService', ['$routeParams', '$http', 'MainService', fu
 					}
 					profileService.data.bookDetails = userBookDetails
 				}).error(function(data) {
+					profileService.data.bookDetails = null;
 					console.log("Unable to fetch books");
 					profileService.reset();
 				});
+		} else {
+			profileService.data.bookDetails = null;
 		}
 	}
 
